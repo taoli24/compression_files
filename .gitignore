@@ -1,0 +1,5 @@
+output
+test_files
+.idea
+__pycache__/
+.DS_Store
