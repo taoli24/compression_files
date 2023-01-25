@@ -59,6 +59,5 @@ class ImageCompression:
 
 
 if __name__ == '__main__':
-    print(sys.argv)
-    # ImageCompression("./test_files/Sample_jpg.jpg", "./output/", True, 50)()
+    ImageCompression("./test_files/Sample_jpg.jpg", "./output/", True, 50)()
 

@@ -74,9 +74,16 @@ class StreamingCompression:
         cam.release()
         cv2.destroyAllWindows()
 
+    def __call__(self, *args, **kwargs):
+        print("start streaming")
+        print("---------------------------------------------------------------")
+        try:
+            self.stream_video()
+        except Exception as e:
+            print("Unable to stream video: {}".format(str(e)))
+
 
 if __name__ == '__main__':
     print("start streaming")
     print("------------------------------- -------------------------------")
-    sc = StreamingCompression(1, "./output", "/example.mp4")
-    sc.stream_video()
+    StreamingCompression(1, "./output", "/example.mp4")()
